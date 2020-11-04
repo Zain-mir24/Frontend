@@ -58,7 +58,7 @@ app.get('/products', (req, res) => {
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
-            error: 'Provide an address'
+            error: 'Provide an address detail'
         })
     }
       
@@ -114,5 +114,5 @@ app.get('*', (req, res) => {
 
 })
 app.listen(port, () => {
-    console.log('Server is up on port'+3000)
+    console.log('Server is up on port'+port)
 })  
